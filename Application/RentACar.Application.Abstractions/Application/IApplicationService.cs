@@ -1,4 +1,4 @@
-﻿namespace RentACar.Application.Abstractions.Application
+﻿namespace RentACar.Application.Abstractions
 {
     public interface IApplicationService
     {

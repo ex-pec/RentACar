@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Config\DpRepositoriesService.cs" />
     <Compile Include="Config\IDpRepositoriesService.cs" />
-    <Compile Include="ProcedureConst\ProcedureNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

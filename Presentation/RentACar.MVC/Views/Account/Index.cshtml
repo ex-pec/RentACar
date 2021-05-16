@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <form id="LoginPost" class="validate-form needs-validation" novalidate>
+        <div>
+            <label for="username" class="form-label">Username</label>
+            <input id="username" class="form-control" type="text" name="Username" placeholder="Username" required />
+            <div class="invalid-feedback">
+                Please write a username!
+            </div>
+        </div>
+
+        <div>
+            <label for="password" class="form-label">Password</label>
+            <input id="password" class="form-control" type="password" name="Password" placeholder="Password" required />
+            <div class="invalid-feedback">
+                Please write a password!
+            </div>
+        </div>
+        <input type="submit" class="btn-primary" />
+    </form>
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/Custom/Global/sweetalert2@10.js"></script>
+    <script src="~/Scripts/Custom/Global/efficient.js"></script>
+    <script src="~/Scripts/Custom/Account/Login.js"></script>
+</body>
+</html>
+
+

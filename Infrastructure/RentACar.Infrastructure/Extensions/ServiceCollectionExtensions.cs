@@ -1,6 +1,6 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
-using RentACar.Application.Abstractions.Application;
+using RentACar.Application.Abstractions;
 using System;
 using System.Linq;
 

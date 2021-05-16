@@ -1,4 +1,5 @@
-﻿using RentACar.Application.Abstractions.Service;
+﻿using RentACar.Application.Abstractions.Service.Account;
+using RentACar.Application.Abstractions.Service.Account.Model.Procedure;
 using RentACar.Application.Abstractions.Service.Model;
 using RentACar.Application.Helper.ProcedureConst;
 using RentACar.Dal.Dapper;
@@ -13,14 +14,11 @@ namespace RentACar.Application.Service
         {
             this.dpRepositoriesService = dpRepositoriesService;
         }
-        public async Task<ResTry> LoginUserAsync()
+        public async Task<UserDto> LoginUserAsync(LoginReq req)
         {
-            var obj = new ReqTry
-            {
-                UserName = "admin@adminuser.com"
-            };
+            var loginProcedureReq = new LoginProcedureReq(req);
 
-            var res = await dpRepositoriesService.GetSp<ReqTry, ResTry>(ProcedureNames.GetUserByUsername, obj);
+            var res = await dpRepositoriesService.GetSp<LoginProcedureReq, UserDto>(ProcedureNames.GetUserByUsername, loginProcedureReq);
             return res;
         }
     }
