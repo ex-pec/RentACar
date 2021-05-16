@@ -1,11 +1,19 @@
-﻿using System.Web.Mvc;
+﻿using RentACar.Application.Abstractions.Service;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace RentACar.MVC.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private readonly IAccountService accountService;
+        public HomeController(IAccountService accountService)
         {
+            this.accountService = accountService;
+        }
+        public async Task<ActionResult> Index()
+        {
+            var res = await accountService.LoginUserAsync();
             return View();
         }
 
