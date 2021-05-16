@@ -15,5 +15,7 @@ namespace RentACar.Domain
         public Guid VEHICLE_TYPE_ID { get; set; }
 
         public Guid PLAQUE_ID { get; set; }
+
+        public Guid CAR_OFFICE_ID { get; set; }
     }
 }

@@ -6,8 +6,6 @@ namespace RentACar.Domain
     {
         public Guid PHONE_TYPE_ID { get; set; }
 
-        public Guid CUSTOMER_ID { get; set; }
-
         public string PHONE_NUMBER { get; set; }
     }
 }

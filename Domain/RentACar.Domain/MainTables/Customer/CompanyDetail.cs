@@ -8,6 +8,8 @@ namespace RentACar.Domain
 
         public Guid CUSTOMER_ID { get; set; }
 
+        public Guid ADDRESS_ID { get; set; }
+
         public string TAX_NUMBER { get; set; }
 
         public string TITLE { get; set; }

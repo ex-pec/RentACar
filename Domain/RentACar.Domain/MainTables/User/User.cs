@@ -7,13 +7,13 @@ namespace RentACar.Domain
     {
         public Guid ID { get; set; }
 
-        public Guid PHONE_ID { get; set; }
+        public string PHONE { get; set; }
 
         public string NAME { get; set; }
 
         public string SURNAME { get; set; }
 
-        public string EMAIL { get; set; }
+        public string USERNAME { get; set; }
 
         public string PASSWORD_HASH { get; set; }
 
