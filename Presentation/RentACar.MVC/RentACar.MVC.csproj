@@ -133,6 +133,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\AdminAuthorizeAttribute.cs" />
+    <Compile Include="Helper\KgAuthorizeAttribute.cs" />
+    <Compile Include="Helper\Method.cs" />
+    <Compile Include="Helper\ResponseHelper.cs" />
+    <Compile Include="Helper\SessionAuthorizeAttribute.cs" />
+    <Compile Include="Helper\SessionHelper.cs" />
+    <Compile Include="Helper\StaticConsts.cs" />
+    <Compile Include="Models\Response\ResponseViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

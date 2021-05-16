@@ -115,9 +115,8 @@ const sendPostRequest = async (
         dataType: "json",
         success: function (response) {
              hideLoading();
-            if (response.flag) {
+            if (response.Flag) {
                 if (acceptAlert) {
-                    debugger;
                     //if added a language pack declare variable inside a cshtml and use this variable
                     if (successMessage == 'service') {
 
@@ -328,7 +327,6 @@ const lastSubStringTwoChar = (first, last, str) => {
 
 //update modal name fix Unique => husdyjdfA
 const updateItemToForm = (obj, formId) => {
-    debugger;
     $("form").trigger("reset");
 
     var allInputs = $("form :input");

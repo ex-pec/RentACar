@@ -1,6 +1,7 @@
 ﻿using RentACar.Application.Abstractions.Service.Account;
 using RentACar.Application.Abstractions.Service.Account.Model.Procedure;
 using RentACar.Application.Abstractions.Service.Model;
+using RentACar.Application.Helper.Password;
 using RentACar.Application.Helper.ProcedureConst;
 using RentACar.Dal.Dapper;
 using System.Threading.Tasks;
@@ -19,6 +20,10 @@ namespace RentACar.Application.Service
             var loginProcedureReq = new LoginProcedureReq(req);
 
             var res = await dpRepositoriesService.GetSp<LoginProcedureReq, UserDto>(ProcedureNames.GetUserByUsername, loginProcedureReq);
+            var passwordCheck = PasswordHelper.PasswordsMatch(req.Password, res.SECURITY_STAMP, res.PASSWORD_HASH);
+            if (!passwordCheck)
+                return null;
+
             return res;
         }
     }

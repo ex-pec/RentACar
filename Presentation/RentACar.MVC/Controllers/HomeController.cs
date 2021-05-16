@@ -1,8 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using MvcWebUI.Helper;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace RentACar.MVC.Controllers
 {
+    [SessionAuthorize]
     public class HomeController : Controller
     {
         public async Task<ActionResult> Index()
