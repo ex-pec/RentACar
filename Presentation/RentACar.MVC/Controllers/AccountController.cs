@@ -24,16 +24,10 @@ namespace RentACar.MVC.Controllers
         [HttpPost]
         public async Task<ActionResult> Login(LoginReq req)
         {
-            //LoginControl is endpoint file resource field name
             var res = await accountService.LoginUserAsync(req);
-            SessionHelper.KeepSessionInformation<UserDto>(StaticConsts.AboutProgram.SessionName, res);
+            SessionHelper.KeepSessionInformation(res);
             var thisRes = responseHelper.NullCheck(res, StaticConsts.ErrorMessage.LoginErrorMessage);
 
-            //    Entities.ComplexTypes.ResponseModels.Response<UserInfoViewModel> UserInfo = _loginService.LoginUser(Req);
-            //    sessionHelper.KeepSessionInformation<UserInfoViewModel>("UserInfo", UserInfo.Data);
-            //    Session["Language"] = UserInfo.Data.new_dilidName.ToString().ToLower();
-
-            //return Json(UserInfo, JsonRequestBehavior.AllowGet);
             return Json(thisRes, JsonRequestBehavior.AllowGet);
         }
     }

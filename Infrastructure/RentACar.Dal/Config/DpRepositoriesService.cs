@@ -56,16 +56,15 @@ namespace RentACar.Dal.Dapper
             return result;
         }
         //Spler için parametreye göre ToList çekme fonksiyonu
-        public IEnumerable<TRes> GetSpList<TReq, TRes>(string StoredProcedure, TReq ObjParam)
+        public async Task<IEnumerable<TRes>> GetSpList<TReq, TRes>(string StoredProcedure, TReq ObjParam)
         {
             sqlConnection = new SqlConnection(connectionString);
             IEnumerable<TRes> result = default;
             try
             {
-                //var args = new DynamicParameters(ObjParam);
                 conOpen();
-                result = sqlConnection.Query<TRes>(StoredProcedure, ObjParam, commandTimeout: 180,
-                    commandType: CommandType.StoredProcedure).ToList();
+                result = (await sqlConnection.QueryAsync<TRes>(StoredProcedure, ObjParam, commandTimeout: 180,
+                    commandType: CommandType.StoredProcedure)).ToList();
                 conClose();
             }
             catch (Exception ex)

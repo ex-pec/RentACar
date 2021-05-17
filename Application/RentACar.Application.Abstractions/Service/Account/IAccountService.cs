@@ -5,6 +5,6 @@ namespace RentACar.Application.Abstractions.Service.Account
 {
     public interface IAccountService : IApplicationService
     {
-        Task<UserDto> LoginUserAsync(LoginReq req);
+        Task<UserInfo> LoginUserAsync(LoginReq req);
     }
 }

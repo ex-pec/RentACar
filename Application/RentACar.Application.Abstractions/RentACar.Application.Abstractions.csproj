@@ -43,10 +43,42 @@
   <ItemGroup>
     <Compile Include="Application\IApplicationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Account\Model\Procedure\UserIdModel.cs" />
+    <Compile Include="Service\Customer\Model\CustomerDto.cs" />
+    <Compile Include="Service\Office\Model\OfficeInfo.cs" />
+    <Compile Include="Service\Customer\Model\CustomerInfo.cs" />
+    <Compile Include="Service\Booking\Model\BookingDto.cs" />
+    <Compile Include="Service\Booking\Model\BookingInfo.cs" />
     <Compile Include="Service\Account\IAccountService.cs" />
     <Compile Include="Service\Account\Model\LoginReq.cs" />
-    <Compile Include="Service\Account\Model\Procedure\LoginProcedureReq.cs" />
+    <Compile Include="Service\Account\Model\Procedure\UsernameModel.cs" />
+    <Compile Include="Service\Account\Model\UserInfo.cs" />
     <Compile Include="Service\Account\Model\UserDto.cs" />
+    <Compile Include="Service\ViewModel\VehicleView.cs" />
+    <Compile Include="Service\ViewModel\VehicleModelView.cs" />
+    <Compile Include="Service\ViewModel\VehicleBookingWithVehicleView.cs" />
+    <Compile Include="Service\ViewModel\VehicleBookingView.cs" />
+    <Compile Include="Service\ViewModel\UserRoleView.cs" />
+    <Compile Include="Service\ViewModel\UserPhoneView.cs" />
+    <Compile Include="Service\ViewModel\UserEmailView.cs" />
+    <Compile Include="Service\ViewModel\UserAddressView.cs" />
+    <Compile Include="Service\ViewModel\RentACarOfficeView.cs" />
+    <Compile Include="Service\ViewModel\RentACarOfficePhoneView.cs" />
+    <Compile Include="Service\ViewModel\RentACarOfficeEmailView.cs" />
+    <Compile Include="Service\ViewModel\ProvinceDistrictView.cs" />
+    <Compile Include="Service\ViewModel\PhoneView.cs" />
+    <Compile Include="Service\ViewModel\ExchangeRateView.cs" />
+    <Compile Include="Service\ViewModel\EmailView.cs" />
+    <Compile Include="Service\ViewModel\CustomerPhoneView.cs" />
+    <Compile Include="Service\ViewModel\CustomerEmailView.cs" />
+    <Compile Include="Service\ViewModel\CustomerAddressView.cs" />
+    <Compile Include="Service\ViewModel\AddressView.cs" />
+    <Compile Include="Service\ViewModel\CompanyDetailView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service\Booking\Model\Procedure\" />
+    <Folder Include="Service\Customer\Model\Procedure\" />
+    <Folder Include="Service\Office\Model\Procedure\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

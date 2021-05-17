@@ -1,13 +1,14 @@
 ﻿using RentACar.Application.Abstractions.Service.Model;
+using System;
 
 namespace RentACar.Application.Abstractions.Service.Account.Model.Procedure
 {
-    public class LoginProcedureReq
+    public class UserIdModel
     {
-        public LoginProcedureReq(LoginReq req)
+        public UserIdModel(UserDto req)
         {
-            this.Username = req.Username;
+            this.UserId = req.ID;
         }
-        public string Username { get; set; }
+        public Guid UserId { get; set; }
     }
 }
